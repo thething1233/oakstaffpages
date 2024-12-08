@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This are is password protected</title>
+    <link rel="stylesheet" type="text/css" href="password.css" />
+</head>
+<div>
+<body>
+    <h1>This area is password protected</h1>
+    <h2>Please enter the password to continue</h2>
+<form>
+    <input type="password" id="pswd">
+</form>
+<button onclick="checkPswd();" style="display: inline;">Login</button>
+</div>
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "oakstaff527";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="home.html";
+        }
+        else{
+            alert("Passwords do not match.");
+        }
+    }
+</script>
+</body>
+</html>
